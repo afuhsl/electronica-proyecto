@@ -1,0 +1,16 @@
+<div class="card-container">
+    <mat-card
+      *ngFor="let info of info$ | async"
+      (click)="selectInfo(info)"
+    >
+      <mat-card-header>
+        <mat-card-title></mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>{{ info.humedad }}</mat-card-content>
+      <mat-card-content>{{ info.distancia }}</mat-card-content>
+      <mat-card-content>{{ info.luz }}</mat-card-content>
+      <mat-card-content>{{ info.temperatura }}</mat-card-content>
+      <mat-card-content>{{ info.ventiladores }}</mat-card-content>
+    </mat-card>
+  </div>

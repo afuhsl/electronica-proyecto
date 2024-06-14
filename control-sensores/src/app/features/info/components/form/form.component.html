@@ -1,0 +1,25 @@
+<form [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Temperatura</mat-label>
+      <input required formControlName="temperatura" class="form-control" placeholder="20" type="number" matInput />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Humedad</mat-label>
+      <input required formControlName="humedad" class="form-control" placeholder="20" type="number" matInput />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Luz</mat-label>
+      <input matInput required formControlName="luz" class="form-control" placeholder="20" type="number" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Distancia</mat-label>
+      <input matInput required formControlName="distancia" class="form-control" placeholder="20" type="number" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Ventiladores</mat-label>
+      <input matInput required formControlName="ventiladores" class="form-control" placeholder="20" type="boolean" />
+    </mat-form-field>
+    <button type="button" mat-raised-button (click)="submit()" color="primary" [disabled]="!form.valid">
+      Submit
+    </button>
+  </form>

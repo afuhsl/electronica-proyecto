@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="content">
+      <div class="list">
+        <div class="list-header">
+          <h3>Información</h3>
+        </div>
+        <app-list
+          [info$]="allInfo$"
+          (infoEmitter)="selectInfo($event)"
+        ></app-list>
+      </div>
+      <app-detail
+        [info]="selectedInfo"
+        *ngIf="selectedInfo"
+      ></app-detail>
+    </div>
+  </div>
