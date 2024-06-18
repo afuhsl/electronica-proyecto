@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Info } from '../../interfaces/interface';
+import { IeFirestoreService } from '../../../../core/ie-firestore.service';
 
 @Component({
   selector: 'app-list',
@@ -11,7 +12,7 @@ export class ListComponent implements OnInit {
   @Input() info$: Observable<Info[]>;
   @Output() infoEmitter = new EventEmitter<Info>();
 
-  constructor() {}
+  constructor(private firestoreService: IeFirestoreService) {}
 
   ngOnInit(): void {}
 
