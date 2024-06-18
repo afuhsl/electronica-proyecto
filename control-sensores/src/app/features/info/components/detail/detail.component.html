@@ -1,15 +1,17 @@
 <div class="detail">
-    <div class="content">
-      <div>
-        <p>Humedad: {{ info.humedad }}</p>
-        <p>Distancia: {{ info.distancia }}</p>
-        <p>Luz: {{ info.luz }}</p>
-        <p>Temperatura: {{ info.temperatura }}</p>
-        <p>Ventiladores: {{ info.ventiladores }}</p>
-      </div>
-    </div>
+  <div class="content">
     <div>
-      <button (click)="update()" mat-raised-button color="primary">Edit</button>
-      <button (click)="delete()" mat-raised-button color="warn">Delete</button>
+      <p>Humedad: {{ info.humedad }}</p>
+      <p>Distancia: {{ info.distancia }}</p>
+      <p>Luz: {{ info.luz }}</p>
+      <p>Temperatura: {{ info.temperatura }}</p>
+      <p>Ventiladores: {{ info.ventiladores }}</p>
     </div>
   </div>
+  <div class="chart-container">
+    <div class="bar" [ngStyle]="{'height.%': info.humedad}">Humedad {{info.humedad}}</div>
+    <div class="bar" [ngStyle]="{'height.%': info.distancia}">Distancia {{info.distancia}}</div>
+    <div class="bar" [ngStyle]="{'height.%': info.luz}">Luz {{info.luz}}</div>
+    <div class="bar" [ngStyle]="{'height.%': info.temperatura}">Temperatura {{info.temperatura}}</div>
+  </div>  
+</div>
