@@ -1,0 +1,37 @@
+<h2>Gráficas de Sensores</h2>
+
+<div class="p-grid">
+  <div class="p-col-12 p-md-6">
+    <div class="card">
+      <h3>Temperatura</h3>
+      <p-chart type="line" [data]="chartDataTemperatura"></p-chart>
+    </div>
+  </div>
+  
+  <div class="p-col-12 p-md-6">
+    <div class="card">
+      <h3>Humedad</h3>
+      <p-chart type="line" [data]="chartDataHumedad"></p-chart>
+    </div>
+  </div>
+  
+  <div class="p-col-12 p-md-6">
+    <div class="card">
+      <h3>Luz</h3>
+      <p-chart type="line" [data]="chartDataLuz"></p-chart>
+    </div>
+  </div>
+  
+  <div class="p-col-12 p-md-6">
+    <div class="card">
+      <h3>Distancia</h3>
+      <p-chart type="line" [data]="chartDataDistancia"></p-chart>
+    </div>
+  </div>
+  <div class="p-col-12 p-md-6">
+    <div class="card">
+      <h3>Todas las Variables</h3>
+      <p-chart type="bar" [data]="chartData"></p-chart>
+    </div>
+  </div>
+</div>
